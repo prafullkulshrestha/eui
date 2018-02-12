@@ -1,0 +1,20 @@
+<div *ngIf="!hasError">
+  <div *ngFor="let item of searchResults | slice:0:numItemsToShow" class="display-item">
+    <div display-item [item]="item" [itemViewOptions]="itemViewOptions"></div>
+  </div>
+  <div *ngIf="searchResultCount < totalResultCount" style="margin-top: 10px;">
+    <button class="btn btn-primary btn-block" (click)="loadMore()">Show more</button>
+  </div>
+
+  <div *ngIf="searchResultCount === 0" class="row">
+    <div class="info-box">
+      No search results found.
+    </div>
+  </div>
+</div>
+
+<div *ngIf="hasError" class="row">
+  <div class="info-box">
+    <div class="text-danger">Some error occured while searching for item masters.</div>
+  </div>
+</div>

@@ -1,0 +1,32 @@
+<!--Navbar Heading-->
+<div class="container-main">
+  <div class="card-title dark-blue center page-header-text">
+    Manual Matching
+  </div>
+</div>
+
+<div class="card main-detail">
+  <div>
+    <div #sourceInfoEl class="row" [class.fixed-source-info-box]="fixedSourceInfoBox"
+        [class.fixed-source-info-box-mm]="fixedSourceInfoBox">
+      <org-source-info [info]="sourceInfo"></org-source-info>
+    </div>
+    <div class="separator" style="margin-top: 15px;"></div>
+    <comments [limit]="3" [comments]="comments"></comments>
+  </div>
+  <br/>
+  <div class="row">
+    <div class="pull-left">
+      <button class="btn grey-btn" (click)="createNewMaster()">Create New Master</button>
+    </div>
+    <div class="pull-right">
+      <button class="btn grey-btn btns">Reassign</button>
+      <button class="btn grey-btn btns">Skip</button>
+    </div>
+  </div>
+</div>
+
+<div class="card main-detail">
+  <external-resources [resources]="externalResources"></external-resources>
+</div>
+<div style="height: 600px;"></div>

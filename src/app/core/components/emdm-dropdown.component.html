@@ -1,0 +1,22 @@
+<div class="dropdown">
+    <div class="input-group" [class.open]="showList">
+        <button #button class="btn btn-default dropdown-toggle form-control" type="button" 
+                [class.disabled-button]="disable"
+                (click)="toggleListDisplay()"
+                (keyup)="navigateList($event);" 
+                (keydown)="handleKeyDown($event);">
+            {{selectionText}}
+        </button>
+        <ul class="dropdown-menu list">
+            <li *ngFor="let item of items" 
+                        [class.active]="tempCurrent && tempCurrent.value === item.value"
+                        (mouseover)="tempCurrent = item">
+                <a href="javascript:void(0);" (click)="setCurrentVal(item)">{{item.value}}</a>
+            </li>
+        </ul>
+        <span class="input-group-addon btn-show-list" [class.disabled-button]="disable"
+            (click)="button.focus(); toggleListDisplay()">
+                <span class="caret dropdown-toggle"></span>
+        </span>
+    </div>
+</div>

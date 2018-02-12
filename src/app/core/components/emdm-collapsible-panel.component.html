@@ -1,0 +1,16 @@
+<div>
+    <div class="row cpanel-header" (click)="togglePanelBody()">
+        <div class="pull-left txt-size small-label" style="line-height: 20px;"
+                [ngClass]="{'small-label': !titleTextSize || titleTextSize==='small', 'big-label': titleTextSize==='large'}">
+            <ng-content select="[header]"></ng-content>
+        </div>
+        <label class="pull-right action-btn" *ngIf="collapsed">+</label>
+        <label class="pull-right action-btn" *ngIf="!collapsed">&ndash;</label>
+        <div class="info pull-right" style="line-height: 23px;"
+            [ngClass]="{'small-label': !titleTextSize || titleTextSize==='small', 'big-label': titleTextSize==='large'}">{{info}}</div>
+    </div>
+    <div class="row cpanel-body" *ngIf="!collapsed" [class.open]="!collapsed">
+        <ng-content select="[content]"></ng-content>
+    </div>
+    <hr class="separator" *ngIf="!hideBorder">
+</div>

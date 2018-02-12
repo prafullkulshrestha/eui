@@ -1,0 +1,512 @@
+[
+  {
+    "industrySegments": [
+      {
+        "industrySegment": "ALT SNACKS",
+        "industryClasses": [
+          {
+            "industryClass": "PRETZELS",
+            "externalLinks": [
+              {
+                "linkUrl": "https://delivery.gladson.com/(X(1))/Entry.aspx?ReturnUrl=%2fAdvancedSearch.aspx",
+                "linkDesc": "Gladson",
+                "linkName": "Gladson"
+              },
+              {
+                "linkUrl": "http://www.eby-brown.com/",
+                "linkDesc": "Eby-Brown Distributor",
+                "linkName": "Eby-Brown Distributor"
+              },
+              {
+                "linkUrl": "http://www.southcodistributing.com/Customer_Tools/SpecialCigar.pdf",
+                "linkDesc": "South Co Distributor",
+                "linkName": "South Co Distributor"
+              },
+              {
+                "linkUrl": "https://www.mclaneco.com/content/dam/sms/documents/downloads/Feb13_magazine.pdf",
+                "linkDesc": "McLane Distributor",
+                "linkName": "McLane Distributor"
+              },
+              {
+                "linkUrl": "https://www.jrcigars.com/",
+                "linkDesc": "Online Store",
+                "linkName": "Online Store"
+              },
+              {
+                "linkUrl": "http://www.product-open-data.com/product-brand-list-6K3JQE.html",
+                "linkDesc": "Open Product Data",
+                "linkName": "Open Product Data"
+              },
+              {
+                "linkUrl": "http://ictusainc.com/specsheets/1oz-OHM-Pipe-Tobacco.pdf",
+                "linkDesc": "Inter-Continental Trading Co",
+                "linkName": "Inter-Continental Trading Co"
+              },
+              {
+                "linkUrl": "http://ictusainc.com/specsheets/ohm-16oz-pipe-tobacco-specsheet.pdf",
+                "linkDesc": "Inter-Continental Trading Co",
+                "linkName": "Inter-Continental Trading Co"
+              },
+              {
+                "linkUrl": "http://ictusainc.com/specsheets/752-Pipe-Tobacco.pdf",
+                "linkDesc": "Inter-Continental Trading Co",
+                "linkName": "Inter-Continental Trading Co"
+              },
+              {
+                "linkUrl": "http://value.valuewholesale.com/(S(ut3kkyx1cwojpwgfamvee4kc))/Orders/CatalogPublic.aspx?ID=66",
+                "linkDesc": "Value ",
+                "linkName": "Value "
+              },
+              {
+                "linkUrl": "www.google.com",
+                "linkDesc": "Google search with selected attributes",
+                "linkName": "Google"
+              }
+            ]
+          },
+          {
+            "industryClass": "BISCUITS",
+            "externalLinks": [
+              {
+                "linkUrl": "https://delivery.gladson.com/(X(1))/Entry.aspx?ReturnUrl=%2fAdvancedSearch.aspx",
+                "linkDesc": "Gladson",
+                "linkName": "Gladson"
+              },
+              {
+                "linkUrl": "http://www.eby-brown.com/",
+                "linkDesc": "Eby-Brown Distributor",
+                "linkName": "Eby-Brown Distributor"
+              },
+              {
+                "linkUrl": "http://www.southcodistributing.com/Customer_Tools/SpecialCigar.pdf",
+                "linkDesc": "South Co Distributor",
+                "linkName": "South Co Distributor"
+              },
+              {
+                "linkUrl": "https://www.mclaneco.com/content/dam/sms/documents/downloads/Feb13_magazine.pdf",
+                "linkDesc": "McLane Distributor",
+                "linkName": "McLane Distributor"
+              },
+              {
+                "linkUrl": "https://www.jrcigars.com/",
+                "linkDesc": "Online Store",
+                "linkName": "Online Store"
+              },
+              {
+                "linkUrl": "http://www.product-open-data.com/product-brand-list-6K3JQE.html",
+                "linkDesc": "Open Product Data",
+                "linkName": "Open Product Data"
+              },
+              {
+                "linkUrl": "http://ictusainc.com/specsheets/1oz-OHM-Pipe-Tobacco.pdf",
+                "linkDesc": "Inter-Continental Trading Co",
+                "linkName": "Inter-Continental Trading Co"
+              },
+              {
+                "linkUrl": "http://ictusainc.com/specsheets/ohm-16oz-pipe-tobacco-specsheet.pdf",
+                "linkDesc": "Inter-Continental Trading Co",
+                "linkName": "Inter-Continental Trading Co"
+              },
+              {
+                "linkUrl": "http://ictusainc.com/specsheets/752-Pipe-Tobacco.pdf",
+                "linkDesc": "Inter-Continental Trading Co",
+                "linkName": "Inter-Continental Trading Co"
+              },
+              {
+                "linkUrl": "http://value.valuewholesale.com/(S(ut3kkyx1cwojpwgfamvee4kc))/Orders/CatalogPublic.aspx?ID=66",
+                "linkDesc": "Value ",
+                "linkName": "Value "
+              },
+              {
+                "linkUrl": "www.google.com",
+                "linkDesc": "Google search with selected attributes",
+                "linkName": "Google"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "industrySegment": "CHOCOLATES",
+        "industryClasses": [
+          {
+            "industryClass": "FRUITIES",
+            "externalLinks": [
+              {
+                "linkUrl": "https://delivery.gladson.com/(X(1))/Entry.aspx?ReturnUrl=%2fAdvancedSearch.aspx",
+                "linkDesc": "Gladson",
+                "linkName": "Gladson"
+              },
+              {
+                "linkUrl": "http://www.eby-brown.com/",
+                "linkDesc": "Eby-Brown Distributor",
+                "linkName": "Eby-Brown Distributor"
+              },
+              {
+                "linkUrl": "http://www.southcodistributing.com/Customer_Tools/SpecialCigar.pdf",
+                "linkDesc": "South Co Distributor",
+                "linkName": "South Co Distributor"
+              },
+              {
+                "linkUrl": "https://www.mclaneco.com/content/dam/sms/documents/downloads/Feb13_magazine.pdf",
+                "linkDesc": "McLane Distributor",
+                "linkName": "McLane Distributor"
+              },
+              {
+                "linkUrl": "https://www.jrcigars.com/",
+                "linkDesc": "Online Store",
+                "linkName": "Online Store"
+              },
+              {
+                "linkUrl": "http://www.product-open-data.com/product-brand-list-6K3JQE.html",
+                "linkDesc": "Open Product Data",
+                "linkName": "Open Product Data"
+              },
+              {
+                "linkUrl": "http://ictusainc.com/specsheets/1oz-OHM-Pipe-Tobacco.pdf",
+                "linkDesc": "Inter-Continental Trading Co",
+                "linkName": "Inter-Continental Trading Co"
+              },
+              {
+                "linkUrl": "http://ictusainc.com/specsheets/ohm-16oz-pipe-tobacco-specsheet.pdf",
+                "linkDesc": "Inter-Continental Trading Co",
+                "linkName": "Inter-Continental Trading Co"
+              },
+              {
+                "linkUrl": "http://ictusainc.com/specsheets/752-Pipe-Tobacco.pdf",
+                "linkDesc": "Inter-Continental Trading Co",
+                "linkName": "Inter-Continental Trading Co"
+              },
+              {
+                "linkUrl": "http://value.valuewholesale.com/(S(ut3kkyx1cwojpwgfamvee4kc))/Orders/CatalogPublic.aspx?ID=66",
+                "linkDesc": "Value ",
+                "linkName": "Value "
+              },
+              {
+                "linkUrl": "www.google.com",
+                "linkDesc": "Google search with selected attributes",
+                "linkName": "Google"
+              }
+            ]
+          },
+          {
+            "industryClass": "DARK",
+            "externalLinks": [
+              {
+                "linkUrl": "https://delivery.gladson.com/(X(1))/Entry.aspx?ReturnUrl=%2fAdvancedSearch.aspx",
+                "linkDesc": "Gladson",
+                "linkName": "Gladson"
+              },
+              {
+                "linkUrl": "http://www.eby-brown.com/",
+                "linkDesc": "Eby-Brown Distributor",
+                "linkName": "Eby-Brown Distributor"
+              },
+              {
+                "linkUrl": "http://www.southcodistributing.com/Customer_Tools/SpecialCigar.pdf",
+                "linkDesc": "South Co Distributor",
+                "linkName": "South Co Distributor"
+              },
+              {
+                "linkUrl": "https://www.mclaneco.com/content/dam/sms/documents/downloads/Feb13_magazine.pdf",
+                "linkDesc": "McLane Distributor",
+                "linkName": "McLane Distributor"
+              },
+              {
+                "linkUrl": "https://www.jrcigars.com/",
+                "linkDesc": "Online Store",
+                "linkName": "Online Store"
+              },
+              {
+                "linkUrl": "http://www.product-open-data.com/product-brand-list-6K3JQE.html",
+                "linkDesc": "Open Product Data",
+                "linkName": "Open Product Data"
+              },
+              {
+                "linkUrl": "http://ictusainc.com/specsheets/1oz-OHM-Pipe-Tobacco.pdf",
+                "linkDesc": "Inter-Continental Trading Co",
+                "linkName": "Inter-Continental Trading Co"
+              },
+              {
+                "linkUrl": "http://ictusainc.com/specsheets/ohm-16oz-pipe-tobacco-specsheet.pdf",
+                "linkDesc": "Inter-Continental Trading Co",
+                "linkName": "Inter-Continental Trading Co"
+              },
+              {
+                "linkUrl": "http://ictusainc.com/specsheets/752-Pipe-Tobacco.pdf",
+                "linkDesc": "Inter-Continental Trading Co",
+                "linkName": "Inter-Continental Trading Co"
+              },
+              {
+                "linkUrl": "http://value.valuewholesale.com/(S(ut3kkyx1cwojpwgfamvee4kc))/Orders/CatalogPublic.aspx?ID=66",
+                "linkDesc": "Value ",
+                "linkName": "Value "
+              },
+              {
+                "linkUrl": "www.google.com",
+                "linkDesc": "Google search with selected attributes",
+                "linkName": "Google"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "industrySector": "FOOD"
+  },
+  {
+    "industrySegments": [
+      {
+        "industrySegment": "VAPOR",
+        "industryClasses": [
+          {
+            "industryClass": "BATTERY",
+            "externalLinks": [
+              {
+                "linkUrl": "https://delivery.gladson.com/(X(1))/Entry.aspx?ReturnUrl=%2fAdvancedSearch.aspx",
+                "linkDesc": "Gladson",
+                "linkName": "Gladson"
+              },
+              {
+                "linkUrl": "http://www.eby-brown.com/",
+                "linkDesc": "Eby-Brown Distributor",
+                "linkName": "Eby-Brown Distributor"
+              },
+              {
+                "linkUrl": "http://www.southcodistributing.com/Customer_Tools/SpecialCigar.pdf",
+                "linkDesc": "South Co Distributor",
+                "linkName": "South Co Distributor"
+              },
+              {
+                "linkUrl": "https://www.mclaneco.com/content/dam/sms/documents/downloads/Feb13_magazine.pdf",
+                "linkDesc": "McLane Distributor",
+                "linkName": "McLane Distributor"
+              },
+              {
+                "linkUrl": "https://www.jrcigars.com/",
+                "linkDesc": "Online Store",
+                "linkName": "Online Store"
+              },
+              {
+                "linkUrl": "http://www.product-open-data.com/product-brand-list-6K3JQE.html",
+                "linkDesc": "Open Product Data",
+                "linkName": "Open Product Data"
+              },
+              {
+                "linkUrl": "http://ictusainc.com/specsheets/1oz-OHM-Pipe-Tobacco.pdf",
+                "linkDesc": "Inter-Continental Trading Co",
+                "linkName": "Inter-Continental Trading Co"
+              },
+              {
+                "linkUrl": "http://ictusainc.com/specsheets/ohm-16oz-pipe-tobacco-specsheet.pdf",
+                "linkDesc": "Inter-Continental Trading Co",
+                "linkName": "Inter-Continental Trading Co"
+              },
+              {
+                "linkUrl": "http://ictusainc.com/specsheets/752-Pipe-Tobacco.pdf",
+                "linkDesc": "Inter-Continental Trading Co",
+                "linkName": "Inter-Continental Trading Co"
+              },
+              {
+                "linkUrl": "http://value.valuewholesale.com/(S(ut3kkyx1cwojpwgfamvee4kc))/Orders/CatalogPublic.aspx?ID=66",
+                "linkDesc": "Value ",
+                "linkName": "Value "
+              },
+              {
+                "linkUrl": "www.google.com",
+                "linkDesc": "Google search with selected attributes",
+                "linkName": "Google"
+              }
+            ]
+          },
+          {
+            "industryClass": "CHARGER",
+            "externalLinks": [
+              {
+                "linkUrl": "https://delivery.gladson.com/(X(1))/Entry.aspx?ReturnUrl=%2fAdvancedSearch.aspx",
+                "linkDesc": "Gladson",
+                "linkName": "Gladson"
+              },
+              {
+                "linkUrl": "http://www.eby-brown.com/",
+                "linkDesc": "Eby-Brown Distributor",
+                "linkName": "Eby-Brown Distributor"
+              },
+              {
+                "linkUrl": "http://www.southcodistributing.com/Customer_Tools/SpecialCigar.pdf",
+                "linkDesc": "South Co Distributor",
+                "linkName": "South Co Distributor"
+              },
+              {
+                "linkUrl": "https://www.mclaneco.com/content/dam/sms/documents/downloads/Feb13_magazine.pdf",
+                "linkDesc": "McLane Distributor",
+                "linkName": "McLane Distributor"
+              },
+              {
+                "linkUrl": "https://www.jrcigars.com/",
+                "linkDesc": "Online Store",
+                "linkName": "Online Store"
+              },
+              {
+                "linkUrl": "http://www.product-open-data.com/product-brand-list-6K3JQE.html",
+                "linkDesc": "Open Product Data",
+                "linkName": "Open Product Data"
+              },
+              {
+                "linkUrl": "http://ictusainc.com/specsheets/1oz-OHM-Pipe-Tobacco.pdf",
+                "linkDesc": "Inter-Continental Trading Co",
+                "linkName": "Inter-Continental Trading Co"
+              },
+              {
+                "linkUrl": "http://ictusainc.com/specsheets/ohm-16oz-pipe-tobacco-specsheet.pdf",
+                "linkDesc": "Inter-Continental Trading Co",
+                "linkName": "Inter-Continental Trading Co"
+              },
+              {
+                "linkUrl": "http://ictusainc.com/specsheets/752-Pipe-Tobacco.pdf",
+                "linkDesc": "Inter-Continental Trading Co",
+                "linkName": "Inter-Continental Trading Co"
+              },
+              {
+                "linkUrl": "http://value.valuewholesale.com/(S(ut3kkyx1cwojpwgfamvee4kc))/Orders/CatalogPublic.aspx?ID=66",
+                "linkDesc": "Value ",
+                "linkName": "Value "
+              },
+              {
+                "linkUrl": "www.google.com",
+                "linkDesc": "Google search with selected attributes",
+                "linkName": "Google"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "industrySegment": "CIGARETTES",
+        "industryClasses": [
+          {
+            "industryClass": "CIGARETTES",
+            "externalLinks": [
+              {
+                "linkUrl": "https://delivery.gladson.com/(X(1))/Entry.aspx?ReturnUrl=%2fAdvancedSearch.aspx",
+                "linkDesc": "Gladson",
+                "linkName": "Gladson"
+              },
+              {
+                "linkUrl": "http://www.eby-brown.com/",
+                "linkDesc": "Eby-Brown Distributor",
+                "linkName": "Eby-Brown Distributor"
+              },
+              {
+                "linkUrl": "http://www.southcodistributing.com/Customer_Tools/SpecialCigar.pdf",
+                "linkDesc": "South Co Distributor",
+                "linkName": "South Co Distributor"
+              },
+              {
+                "linkUrl": "https://www.mclaneco.com/content/dam/sms/documents/downloads/Feb13_magazine.pdf",
+                "linkDesc": "McLane Distributor",
+                "linkName": "McLane Distributor"
+              },
+              {
+                "linkUrl": "https://www.jrcigars.com/",
+                "linkDesc": "Online Store",
+                "linkName": "Online Store"
+              },
+              {
+                "linkUrl": "http://www.product-open-data.com/product-brand-list-6K3JQE.html",
+                "linkDesc": "Open Product Data",
+                "linkName": "Open Product Data"
+              },
+              {
+                "linkUrl": "http://ictusainc.com/specsheets/1oz-OHM-Pipe-Tobacco.pdf",
+                "linkDesc": "Inter-Continental Trading Co",
+                "linkName": "Inter-Continental Trading Co"
+              },
+              {
+                "linkUrl": "http://ictusainc.com/specsheets/ohm-16oz-pipe-tobacco-specsheet.pdf",
+                "linkDesc": "Inter-Continental Trading Co",
+                "linkName": "Inter-Continental Trading Co"
+              },
+              {
+                "linkUrl": "http://ictusainc.com/specsheets/752-Pipe-Tobacco.pdf",
+                "linkDesc": "Inter-Continental Trading Co",
+                "linkName": "Inter-Continental Trading Co"
+              },
+              {
+                "linkUrl": "http://value.valuewholesale.com/(S(ut3kkyx1cwojpwgfamvee4kc))/Orders/CatalogPublic.aspx?ID=66",
+                "linkDesc": "Value ",
+                "linkName": "Value "
+              },
+              {
+                "linkUrl": "www.google.com",
+                "linkDesc": "Google search with selected attributes",
+                "linkName": "Google"
+              }
+            ]
+          },
+          {
+            "industryClass": "PREMIUM CIGARETTES",
+            "externalLinks": [
+              {
+                "linkUrl": "https://delivery.gladson.com/(X(1))/Entry.aspx?ReturnUrl=%2fAdvancedSearch.aspx",
+                "linkDesc": "Gladson",
+                "linkName": "Gladson"
+              },
+              {
+                "linkUrl": "http://www.eby-brown.com/",
+                "linkDesc": "Eby-Brown Distributor",
+                "linkName": "Eby-Brown Distributor"
+              },
+              {
+                "linkUrl": "http://www.southcodistributing.com/Customer_Tools/SpecialCigar.pdf",
+                "linkDesc": "South Co Distributor",
+                "linkName": "South Co Distributor"
+              },
+              {
+                "linkUrl": "https://www.mclaneco.com/content/dam/sms/documents/downloads/Feb13_magazine.pdf",
+                "linkDesc": "McLane Distributor",
+                "linkName": "McLane Distributor"
+              },
+              {
+                "linkUrl": "https://www.jrcigars.com/",
+                "linkDesc": "Online Store",
+                "linkName": "Online Store"
+              },
+              {
+                "linkUrl": "http://www.product-open-data.com/product-brand-list-6K3JQE.html",
+                "linkDesc": "Open Product Data",
+                "linkName": "Open Product Data"
+              },
+              {
+                "linkUrl": "http://ictusainc.com/specsheets/1oz-OHM-Pipe-Tobacco.pdf",
+                "linkDesc": "Inter-Continental Trading Co",
+                "linkName": "Inter-Continental Trading Co"
+              },
+              {
+                "linkUrl": "http://ictusainc.com/specsheets/ohm-16oz-pipe-tobacco-specsheet.pdf",
+                "linkDesc": "Inter-Continental Trading Co",
+                "linkName": "Inter-Continental Trading Co"
+              },
+              {
+                "linkUrl": "http://ictusainc.com/specsheets/752-Pipe-Tobacco.pdf",
+                "linkDesc": "Inter-Continental Trading Co",
+                "linkName": "Inter-Continental Trading Co"
+              },
+              {
+                "linkUrl": "http://value.valuewholesale.com/(S(ut3kkyx1cwojpwgfamvee4kc))/Orders/CatalogPublic.aspx?ID=66",
+                "linkDesc": "Value ",
+                "linkName": "Value "
+              },
+              {
+                "linkUrl": "www.google.com",
+                "linkDesc": "Google search with selected attributes",
+                "linkName": "Google"
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "industrySector": "TOBACCO"
+  }
+]

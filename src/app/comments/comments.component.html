@@ -1,0 +1,66 @@
+<emdm-collapsible-panel [info]="comments.length">
+  <div header>Comments</div>
+  <div content class="comment-section">
+    <div class="row">
+      <textarea maxlength="250" class="form-control comment-input" [(ngModel)]="commentText"></textarea>
+    </div>
+    <div class="row">
+      <div class="pull-left">
+        <button class="btn" (click)="clearComment()">Cancel</button>
+      </div>
+      <div class="pull-right">
+        <button class="btn btn-primary" (click)="addComment()">Add Comment</button>
+      </div>
+    </div>
+
+    <div class="comments">
+      <div *ngFor="let comment of comments| slice:0:limit; let i = index;" class="comment">
+        <div class="row">
+          <label class="pull-left">{{comment.email}}</label>
+          <label class="pull-right">{{comment.createdDate}}</label>
+        </div>
+        <div>
+          <span><pre class="comment-content">{{comment.text}}</pre></span>
+          <i class="fa fa-trash-o pull-right pointer" aria-hidden="true" (click)="deleteComment(i)"></i>
+        </div>
+      </div>
+    </div>
+    <div *ngIf="comments.length > 2" style="text-align: center"><button class="btn btn-primary" (click)="showAllcomments()">View All Comments</button></div>
+  </div>
+</emdm-collapsible-panel>
+
+<!-- comment modal -->
+<div #expandedComments class="modal fade" role="dialog" tabindex="-1">
+  <div class="modal-dialog" style="z-index: 9999;width: 1000px;">
+    <!-- Modal content -->
+    <div class="modal-content">
+      <div class="modal-body">
+        <div class="row">
+          <label class="pull-left">{{comments.length}} Notes</label>
+          <button class="btn pull-right" data-dismiss="modal">Close</button>
+        </div>
+        <div class="row">
+          <textarea maxlength="250" class="form-control comment-input" [(ngModel)]="commentText"></textarea>
+        </div>
+        <div class="row">
+          <div class="pull-left">
+            <button class="btn" (click)="clearComment()">Cancel</button>
+          </div>
+          <div class="pull-right">
+            <button class="btn btn-primary" (click)="addComment()">Add Comment</button>
+          </div>
+        </div>
+        <div *ngFor="let comment of comments; let i = index;" class="comment">
+          <div class="row">
+            <label class="pull-left">{{comment.email}}</label>
+            <label class="pull-right">{{comment.createdDate}}</label>
+          </div>
+          <div>
+            <span>{{comment.text}}</span>
+            <i class="fa fa-trash-o pull-right pointer" aria-hidden="true" (click)="deleteComment(i)"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

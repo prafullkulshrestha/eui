@@ -1,0 +1,31 @@
+.modal-body .clone-item-container {
+    background: #eeeeee;
+    padding: 10px;
+}
+
+.modal-body .attrs-container{
+    max-height: 500px;
+    overflow: auto;
+}
+
+.modal-body .attr-box {
+    height: 70px;
+}
+
+.modal-body .attr-box .attr-label {
+    font-weight: bold;
+}
+
+.modal-body .attr-box .attr-value {
+    line-height: 40px;
+}
+
+.modal-body .attr-header {
+    margin: 10px 0;
+    font-weight: normal;
+}
+
+.refresh-button{
+  float: right;
+  margin-right: 15px;
+}

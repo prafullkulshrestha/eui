@@ -1,0 +1,190 @@
+/* You can add global styles to this file, and also import other style files */
+body{
+  background-color: #DCDCDC;
+}
+
+.page-header-text {
+    height: 53px;
+    font-size: 24px;
+}
+
+.big-label {
+  color: #005481;
+  font-size: 18px;
+  line-height: 40px;
+}
+
+.small-label {
+  color: #005481;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.info-box {
+  background-color: #f2f2f2;
+  padding: 15px 25px;
+}
+
+.main-detail{
+  background-color: #ffffff;
+  padding: 20px;
+}
+
+.btns{
+  outline: none !important;
+  width:120px ;
+  margin-left: 10px;
+}
+
+.title-label{
+  float: left;
+  margin-bottom: 0px;
+  font-weight: 100;
+  font-size: larger;
+  margin-left: 15px;
+}
+
+.upload-btn{
+  font-size: small;
+  padding: 0px 5px;
+  outline: none !important;
+  width: 100%;
+}
+
+.stretch{
+  height: 100%;
+  width: 100%;
+}
+
+.close-icon{
+  position: absolute;
+  top:10px ;
+  right:10px;
+}
+
+.item-desc-type{
+  width: 145px;
+  font-size: small;
+  padding: 0px 15px;
+  outline: none !important;
+}
+
+.attr-label{
+  font-weight: 600;
+}
+
+.attr-value{
+  min-height: 24px;
+}
+
+.ellipsis {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -o-text-overflow: ellipsis;
+}
+
+.pointer{
+  cursor: pointer;
+}
+
+.wordwrap { 
+   white-space: pre-wrap;      /* CSS3 */   
+   white-space: -moz-pre-wrap; /* Firefox */    
+   white-space: -pre-wrap;     /* Opera <7 */   
+   white-space: -o-pre-wrap;   /* Opera 7 */    
+   word-wrap: break-word;      /* IE */
+}
+
+.center-in-box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.separator {
+  width: 100%;
+  margin: 0;
+  height: 0;
+  border-top: 1px solid #cccccc;
+}
+
+.modal-custom-xl {
+  width: 97%;
+  height: 90%;
+}
+
+.modal-custom-xl .modal-content {
+  margin-bottom: 20px;
+}
+
+.display-item, .combo-item {
+    margin: 10px 0;
+}
+
+.display-item:first-child, .combo-item:first-child {
+    margin-top: 0;
+}
+
+.display-item:last-child, .combo-item:last-child {
+    margin-bottom: 0;
+}
+
+.validation-msg {
+    height: 18px;
+    font-size: 14px;
+    line-height: 18px;
+}
+
+.attr-container {
+    padding-right: 20px;
+}
+
+.attr-field .text-input{
+    width: 100%;
+}
+
+.attr-field button{
+    width: 100%;
+    text-align: left;
+    border-radius: 4px 0 0 4px;
+}
+
+.attr-field .dropdown-menu {
+    min-width: 100%;
+}
+
+.attr-field .btn-show-list {
+    cursor: pointer;
+    border-radius: 0 4px 4px 0;
+}
+
+.control-validation-error {
+    border: 1px solid #a94442;
+}
+
+.fixed-publish-progress-bar {
+  position: fixed;
+  top: 51px;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+}
+
+.fixed-source-info-box {
+  position: fixed;
+  border-bottom: 1px solid #d2d2d2;
+  top: 86px;
+  left: 16px;
+  right: 16px;
+  z-index: 100;
+  transition: width 1s ease-in;
+  -webkit-transition: width 1s ease-in;
+  -o-transition: width 1s ease-in;
+  -moz-transition: width 1s ease-in;
+}
+
+.fixed-source-info-box-mm {
+  top: 50px;
+}

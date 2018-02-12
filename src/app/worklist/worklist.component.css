@@ -1,0 +1,22 @@
+.worklist-row-data{
+    font-size: 14px;
+    line-height: 24px;
+    padding-left: 5px;
+    padding-right: 5px;
+   }
+
+.worklist-row-key{
+    font-size: 14px;
+    line-height: 24px;
+    font-weight: bold;
+    padding-left: 5px;
+    padding-right: 5px;
+   }
+
+.record-select{
+    color: red;
+   }
+
+.card-hover{
+    cursor: pointer;
+   }

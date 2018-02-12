@@ -1,0 +1,152 @@
+<emdm-tabs (onTabSelectionChanged)="onSearchFormTabSelectionChanged($event)">
+  <emdm-tab [title]="'Search By Attributes'" [name]="'SEARCH_BY_ATTRS'">
+    <div class="small-label" style="line-height: 50px;">Primary Attributes</div>
+
+    <!-- Start - Item type form displaying the list sector, segemnt and class -->
+    <form *ngIf="qualifierFormActive" [formGroup]="itemQualifierForm">
+      <div class="row">
+        <div class="col-md-4 attr-container">
+          <div class="attr-label">Sector</div>
+          <div class="attr-field">
+            <emdm-dropdown [items]="sectors" formControlName="sector" 
+               [disable]="disableOptions && disableOptions.sector">
+            </emdm-dropdown>
+          </div>
+          <div class="validation-msg text-danger"></div>
+        </div>
+
+        <div class="col-md-4 attr-container">
+          <div class="attr-label">Segment</div>
+          <div class="attr-field">
+            <emdm-dropdown [items]="segments" formControlName="segment" 
+               [disable]="disableOptions && disableOptions.segment"></emdm-dropdown>
+          </div>
+          <div class="validation-msg text-danger"></div>
+        </div>
+
+        <div class="col-md-4 attr-container">
+          <div class="attr-label">Class</div>
+          <div class="attr-field">
+            <emdm-dropdown [items]="classes" formControlName="class" 
+               [disable]="disableOptions && disableOptions.class"></emdm-dropdown>
+          </div>
+          <div class="validation-msg text-danger"></div>
+        </div>
+      </div>
+    </form>
+    <!-- End - Item type form -->
+
+    <!-- Start - Search form to search for an item -->
+    <form *ngIf="searchFormActive" [formGroup]="searchForm">
+      <div class="col-md-4 attr-container">
+        <div class="attr-label">UPC</div>
+        <div class="attr-field">
+          <input type="text" class="text-input form-control" name="upc" formControlName="upc" [(ngModel)]="searchData.upc" />
+        </div>
+      </div>
+
+      <div class="row" formArrayName="primaryAttributesFormArray">
+        <div class="col-md-4 attr-container" *ngFor="let attr of searchForm.controls.primaryAttributesFormArray.controls; let i = index;">
+          <div class="attr-label">{{searchData.primaryAttributes[i].masterAttrDisplayName}}</div>
+          <div class="attr-field" *ngIf="searchData.primaryAttributes[i].fieldType==='TEXT'">
+            <input type="text" class="text-input form-control" [formControl]="attr" 
+              [(ngModel)]="searchData.primaryAttributes[i].attrValue" />
+          </div>
+          <div class="attr-field" *ngIf="searchData.primaryAttributes[i].fieldType==='number'">
+            <input type="text" class="text-input form-control" [formControl]="attr" 
+              [(ngModel)]="searchData.primaryAttributes[i].attrValue"
+              (keydown.space)="$event.preventDefault();" />
+          </div>
+          <div class="attr-field" *ngIf="searchData.primaryAttributes[i].fieldType==='COMBO'">
+            <emdm-combobox [attrValList]="searchData.primaryAttributes[i].masterAttributeChoices" 
+              [formControl]="attr" [(ngModel)]="searchData.primaryAttributes[i].attrValue">
+            </emdm-combobox>
+          </div>
+          <div class="validation-msg text-danger"></div>
+        </div>
+      </div>
+
+      <emdm-collapsible-panel [titleTextSize]="'small'" [info]="secondaryAttrsFillProportion">
+        <div header>Secondary Attributes</div>
+        <div content class="row" formArrayName="secondaryAttributesFormArray">
+          <div class="col-md-4 attr-container" *ngFor="let attr of searchForm.controls.secondaryAttributesFormArray.controls; let i = index;">
+            <div class="attr-label">{{searchData.secondaryAttributes[i].masterAttrDisplayName}}</div>
+            <div class="attr-field" *ngIf="searchData.secondaryAttributes[i].fieldType==='TEXT'">
+              <input type="text" class="text-input form-control" [formControl]="attr" 
+                [(ngModel)]="searchData.secondaryAttributes[i].attrValue" />
+            </div>
+            <div class="attr-field" *ngIf="searchData.secondaryAttributes[i].fieldType==='number'">
+              <input type="text" class="text-input form-control" [formControl]="attr" 
+                [(ngModel)]="searchData.secondaryAttributes[i].attrValue"
+                (keydown.space)="$event.preventDefault();" />
+            </div>
+            <div class="attr-field" *ngIf="searchData.secondaryAttributes[i].fieldType==='COMBO'">
+              <emdm-combobox [attrValList]="searchData.secondaryAttributes[i].masterAttributeChoices" 
+                [formControl]="attr" [(ngModel)]="searchData.secondaryAttributes[i].attrValue">
+              </emdm-combobox>
+            </div>
+            <div class="validation-msg text-danger"></div>
+          </div>
+        </div>
+      </emdm-collapsible-panel>
+    </form>
+    <!-- End - Search form -->
+
+    <div class="row" style="padding: 10px 0;">
+      <div class="pull-left">
+        <div *ngIf="!isIndependentPage" class="big-label">Item Master Record Matches</div>
+        <div *ngIf="isIndependentPage && searchByAttrs.isSearched" class="big-label">Search Results</div>
+      </div>
+      <div class="pull-right">
+        <button class="btn grey-btn btns" [class.disabled-button]="!searchByAttrs.resetEnabled" (click)="resetSearchForm(searchByAttrs)">Reset</button>
+        <button class="btn btn-primary btns" [class.disabled-button]="!searchByAttrs.searchEnabled" (click)="searchForMaster(searchByAttrs)">{{ searchByAttrs.isSearched ? 'Refresh' : 'Search' }}</button>
+      </div>
+    </div>
+
+    <!--Show Search Results-->
+    <div *ngIf="searchByAttrs.showResults">
+      <item-search [query]="searchByAttrs.searchReqObj" [itemViewOptions]="itemViewOptions"
+        (onSearchComplete)="onSearchCompleted(searchByAttrs)"></item-search>
+    </div>
+
+    <!--Show Initial Search results-->
+    <div *ngIf="!searchByAttrs.isSearched">
+      <div *ngFor="let item of searchByAttrs.initial.results | slice:0:searchByAttrs.initial.numItemsToShow" class="display-item">
+        <div display-item [item]="item" [itemViewOptions]="itemViewOptions">
+        </div>
+      </div>
+
+      <div class="row" *ngIf="!isIndependentPage && searchByAttrs.initial.results.length === 0">
+        <div class="info-box">
+          Search by attributes or unique identifiers to find potential matches.
+        </div>
+      </div>
+      <div *ngIf="searchByAttrs.initial.numItemsToShow < searchByAttrs.initial.results.length" style="margin-top: 10px;">
+        <button class="btn btn-primary btn-block" (click)="searchByAttrs.initial.numItemsToShow = searchByAttrs.initial.numItemsToShow + pageSize">Show more</button>
+      </div>
+    </div>
+  </emdm-tab>
+
+  <emdm-tab [title]="'Search By Unique Identifier'" [name]="'SEARCH_BY_SKEY'">
+    <div style="padding-top: 20px;">
+      <div style="margin-bottom: 5px;">Unique Identifier Search</div>
+      <input type="text" class="form-control" [(ngModel)]="itemSkeySearchVal" (ngModelChange)="onItemSkeySearchValChanged()" />
+    </div>
+
+    <div class="row" style="padding: 10px 0;">
+      <div *ngIf="searchByID.showResults" class="pull-left">
+        <div *ngIf="!isIndependentPage" class="big-label">Item Master Record Matches</div>
+        <div *ngIf="isIndependentPage" class="big-label">Search Results</div>
+      </div>
+      <div class="pull-right">
+        <button class="btn btn-primary btns" [class.disabled-button]="!searchByID.searchEnabled" (click)="searchForMaster(searchByID)">{{ searchByID.isSearched ? 'Refresh' : 'Search' }}</button>
+      </div>
+    </div>
+
+    <!--Show Search Results-->
+    <div *ngIf="searchByID.showResults">
+      <item-search [query]="searchByID.searchReqObj" [itemViewOptions]="itemViewOptions"
+        (onSearchComplete)="onSearchCompleted(searchByID)"></item-search>
+    </div>
+  </emdm-tab>
+</emdm-tabs>

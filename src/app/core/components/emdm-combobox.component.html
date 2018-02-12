@@ -1,0 +1,21 @@
+<div class="dropdown">
+    <div class="input-group" [class.open]="showList">
+        <input type="text" autocomplete="off" #searchBox
+                class="form-control" [(ngModel)]="searchTerm"
+                (keyup)="navigateList($event);" 
+                (keydown)="handleKeyDown($event);" 
+                [class.invalid-input]="invalid" />
+        <ul class="dropdown-menu attr-list" #list (wheel)="stopParentScroll($event)">
+            <li *ngFor="let attr of currentAttrList" #listItemEls
+                        [class.active]="this.tempCurrent && this.tempCurrent.masterAttrValCode===attr.masterAttrValCode"
+                        (mousemove)="tempCurrent = attr">
+                <a href="javascript:void(0);" (click)="setAttrVal(attr)">{{attr.masterAttrValLongName}}</a>
+            </li>
+        </ul>
+        <span class="input-group-addon btn-show-list" 
+            (click)="searchBox.focus(); toggleListDisplay()" [class.invalid-caret]="invalid">
+                <span class="caret dropdown-toggle"></span>
+        </span>
+        <!--<button class="input-group-addon">Add Value</button>-->
+    </div>
+</div>

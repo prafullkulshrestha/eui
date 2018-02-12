@@ -1,0 +1,28 @@
+<div class="container-main">
+  <div class="card-title dark-blue center ">
+    {{screenData?.screenTitle}}
+  </div>
+  <div class="card-title white center small-label worklist-row-data">
+    {{screenData?.worklistData?.length}} {{screenData?.screenSubTitle}}
+  </div>
+</div>
+<div>
+  <div class="row card main-detail card-hover" (click)="viewRecord(wdata)" *ngFor="let wdata of screenData?.worklistData">
+    <div>
+      <div class="row">
+        <div class="big-label" style="margin-left: 5px;"> {{wdata.screenRowTitle}}</div>
+      </div>
+      <div class="row worklist-data ">
+        <div *ngFor="let rowColTitle of wdata?.rowColumnsTitles; let i = index " [class]="screenData?.rowColumnsClasses[i]">
+          <div class="worklist-row-key"> {{rowColTitle}} </div>
+        </div>
+      </div>
+      <div class="row">
+        <div *ngFor="let rowColKey of wdata?.rowColumnsKeys; let i = index " [class]="screenData?.rowColumnsClasses[i]">
+          <div class="worklist-row-data"> {{wdata[rowColKey]}}</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>

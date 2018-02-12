@@ -1,0 +1,40 @@
+.cpanel-container {
+    border-bottom: 1px solid #dddddd;
+}
+
+.cpanel-header {
+    cursor: pointer;
+    padding: 14px 0;
+}
+
+.cpanel-header:hover {
+    background: #eeeeee;
+}
+
+.cpanel-header .heading {
+  color: #005481;
+  font-weight: 100;
+  font-size: 16px;
+}
+
+.cpanel-header .action-btn {
+  color: #005481;
+  font-size: xx-large;
+  line-height: 16px;
+  cursor: pointer;
+  margin-right: 5px;
+}
+
+.cpanel-body {
+    margin-bottom: 15px;
+    height: 0;
+}
+
+.open {
+    height: auto;
+}
+
+.info {
+    padding-right: 15px;
+    margin-top: -2px;
+}

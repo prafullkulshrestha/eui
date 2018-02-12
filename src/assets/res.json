@@ -1,0 +1,477 @@
+[
+  {
+    "masterAttrType":"Text(50) ",
+    "industrySegment":"CIGARETTES ",
+    "industrySector":"TOB ",
+    "masterAttrName":"Manufacturer ",
+    "masterAttrDisplayName":"Manufacturer ",
+    "masterAttrBusImp":"Primary ",
+    "masterAttrDisplaySeq":1,
+    "masterAttrDescSeq":1,
+    "industryClass":"Cigarettes",
+    "attrSkey":4,
+    "classAttrSkey":7,
+    "masterAttributeChoices":[
+      {
+        "masterAttrValSkey":7,
+        "classAttrValSkey":41,
+        "masterAttrValCode":"030\t ",
+        "masterAttrValShortName":"ALL  ",
+        "masterAttrValLongName":"ALL OTHER MFGRS RESERVED FOR CRA ",
+        "isDefaultVal":false,
+        "classAttrSkey":7
+      },
+      {
+        "masterAttrValSkey":5,
+        "classAttrValSkey":39,
+        "masterAttrValCode":"011\t ",
+        "masterAttrValShortName":"BROW ",
+        "masterAttrValLongName":"BROWN & WILLIAMSON ",
+        "isDefaultVal":false,
+        "classAttrSkey":7
+      },
+      {
+        "masterAttrValSkey":1,
+        "classAttrValSkey":35,
+        "masterAttrValCode":"03J\t ",
+        "masterAttrValShortName":"VECT ",
+        "masterAttrValLongName":"VECTOR TOBACCO (USA) LTD. ",
+        "isDefaultVal":true,
+        "classAttrSkey":7
+      },
+      {
+        "masterAttrValSkey":2,
+        "classAttrValSkey":36,
+        "masterAttrValCode":"07K\t ",
+        "masterAttrValShortName":"US F ",
+        "masterAttrValLongName":"US FLUE CURED TOBACCO GROWERS INC ",
+        "isDefaultVal":false,
+        "classAttrSkey":7
+      },
+      {
+        "masterAttrValSkey":8,
+        "classAttrValSkey":42,
+        "masterAttrValCode":"050\t ",
+        "masterAttrValShortName":"JAME ",
+        "masterAttrValLongName":"JAMES B. RUSSEL LTD. ",
+        "isDefaultVal":false,
+        "classAttrSkey":7
+      },
+      {
+        "masterAttrValSkey":3,
+        "classAttrValSkey":37,
+        "masterAttrValCode":"048\t ",
+        "masterAttrValShortName":"PETE ",
+        "masterAttrValLongName":"PETER STUYVESANT OF NEW YORK ",
+        "isDefaultVal":false,
+        "classAttrSkey":7
+      },
+      {
+        "masterAttrValSkey":4,
+        "classAttrValSkey":38,
+        "masterAttrValCode":"086\t ",
+        "masterAttrValShortName":"RED  ",
+        "masterAttrValLongName":"RED HAWK ",
+        "isDefaultVal":false,
+        "classAttrSkey":7
+      },
+      {
+        "masterAttrValSkey":6,
+        "classAttrValSkey":40,
+        "masterAttrValCode":"013\t ",
+        "masterAttrValShortName":"LORI ",
+        "masterAttrValLongName":"LORILLARD ",
+        "isDefaultVal":false,
+        "classAttrSkey":7
+      }
+    ],
+    "fieldType":"Combo"
+  },
+  {
+    "masterAttrType":"Text(50) ",
+    "industrySegment":"CIGARETTES ",
+    "industrySector":"TOB ",
+    "masterAttrName":"BrandFamily ",
+    "masterAttrDisplayName":"Brand Family ",
+    "masterAttrBusImp":"Primary ",
+    "masterAttrDisplaySeq":2,
+    "masterAttrDescSeq":2,
+    "industryClass":"Cigarettes",
+    "attrSkey":18,
+    "classAttrSkey":1,
+    "masterAttributeChoices":[
+      {
+        "masterAttrValSkey":9,
+        "classAttrValSkey":1,
+        "masterAttrValCode":"084\t ",
+        "masterAttrValShortName":"CAMB ",
+        "masterAttrValLongName":"CAMBRIDGE (CIGS) ",
+        "isDefaultVal":true,
+        "classAttrSkey":1
+      },
+      {
+        "masterAttrValSkey":13,
+        "classAttrValSkey":5,
+        "masterAttrValCode":"A51\t ",
+        "masterAttrValShortName":"ZCRA ",
+        "masterAttrValLongName":"ZCRA BISTRO ",
+        "isDefaultVal":false,
+        "classAttrSkey":1
+      },
+      {
+        "masterAttrValSkey":10,
+        "classAttrValSkey":2,
+        "masterAttrValCode":"120\t ",
+        "masterAttrValShortName":"CIGA ",
+        "masterAttrValLongName":"CIGARETTELLO (CIGS) ",
+        "isDefaultVal":false,
+        "classAttrSkey":1
+      },
+      {
+        "masterAttrValSkey":12,
+        "classAttrValSkey":4,
+        "masterAttrValCode":"165\t ",
+        "masterAttrValShortName":"DORA ",
+        "masterAttrValLongName":"DORADO (CIGS) ",
+        "isDefaultVal":false,
+        "classAttrSkey":1
+      },
+      {
+        "masterAttrValSkey":15,
+        "classAttrValSkey":7,
+        "masterAttrValCode":"216\t ",
+        "masterAttrValShortName":"GO T ",
+        "masterAttrValLongName":"GO TO HELL (CIGS) ",
+        "isDefaultVal":false,
+        "classAttrSkey":1
+      },
+      {
+        "masterAttrValSkey":11,
+        "classAttrValSkey":3,
+        "masterAttrValCode":"158\t ",
+        "masterAttrValShortName":"DECA ",
+        "masterAttrValLongName":"DECADE CHYN (CIGS) ",
+        "isDefaultVal":false,
+        "classAttrSkey":1
+      },
+      {
+        "masterAttrValSkey":14,
+        "classAttrValSkey":6,
+        "masterAttrValCode":"A57\t ",
+        "masterAttrValShortName":"ZCRA ",
+        "masterAttrValLongName":"ZCRA L.T. BROWN ",
+        "isDefaultVal":false,
+        "classAttrSkey":1
+      }
+    ],
+    "fieldType":"Combo"
+  },
+  {
+    "masterAttrType":"Text(50) ",
+    "industrySegment":"CIGARETTES ",
+    "industrySector":"TOB ",
+    "masterAttrName":"Brand ",
+    "masterAttrDisplayName":"Brand ",
+    "masterAttrBusImp":"Primary ",
+    "masterAttrDisplaySeq":3,
+    "masterAttrDescSeq":3,
+    "industryClass":"Cigarettes",
+    "attrSkey":2,
+    "classAttrSkey":6,
+    "masterAttributeChoices":[
+      {
+        "masterAttrValSkey":17,
+        "classAttrValSkey":19,
+        "masterAttrValCode":"00554\t ",
+        "masterAttrValShortName":"2 ",
+        "masterAttrValLongName":"2 ",
+        "isDefaultVal":false,
+        "classAttrSkey":6
+      },
+      {
+        "masterAttrValSkey":30,
+        "classAttrValSkey":32,
+        "masterAttrValCode":"00918\t ",
+        "masterAttrValShortName":"VIRG ",
+        "masterAttrValLongName":"VIRGINIAN ",
+        "isDefaultVal":false,
+        "classAttrSkey":6
+      },
+      {
+        "masterAttrValSkey":18,
+        "classAttrValSkey":20,
+        "masterAttrValCode":"00555\t ",
+        "masterAttrValShortName":"3 ",
+        "masterAttrValLongName":"3 ",
+        "isDefaultVal":false,
+        "classAttrSkey":6
+      },
+      {
+        "masterAttrValSkey":32,
+        "classAttrValSkey":34,
+        "masterAttrValCode":"00115\t ",
+        "masterAttrValShortName":"WIDE ",
+        "masterAttrValLongName":"WIDE ",
+        "isDefaultVal":false,
+        "classAttrSkey":6
+      },
+      {
+        "masterAttrValSkey":23,
+        "classAttrValSkey":25,
+        "masterAttrValCode":"00421\t ",
+        "masterAttrValShortName":"BLEN ",
+        "masterAttrValLongName":"BLEND NO 27 ",
+        "isDefaultVal":false,
+        "classAttrSkey":6
+      },
+      {
+        "masterAttrValSkey":21,
+        "classAttrValSkey":23,
+        "masterAttrValCode":"00921\t ",
+        "masterAttrValShortName":"AEGE ",
+        "masterAttrValLongName":"AEGEANS ",
+        "isDefaultVal":false,
+        "classAttrSkey":6
+      },
+      {
+        "masterAttrValSkey":28,
+        "classAttrValSkey":30,
+        "masterAttrValCode":"30241\t ",
+        "masterAttrValShortName":"VINT ",
+        "masterAttrValLongName":"VINTAGE ",
+        "isDefaultVal":false,
+        "classAttrSkey":6
+      },
+      {
+        "masterAttrValSkey":22,
+        "classAttrValSkey":24,
+        "masterAttrValCode":"00602\t ",
+        "masterAttrValShortName":"BLAC ",
+        "masterAttrValLongName":"BLACK LABEL ",
+        "isDefaultVal":false,
+        "classAttrSkey":6
+      },
+      {
+        "masterAttrValSkey":16,
+        "classAttrValSkey":18,
+        "masterAttrValCode":"00553\t ",
+        "masterAttrValShortName":"1 ",
+        "masterAttrValLongName":"1 ",
+        "isDefaultVal":true,
+        "classAttrSkey":6
+      },
+      {
+        "masterAttrValSkey":19,
+        "classAttrValSkey":21,
+        "masterAttrValCode":"00957\t ",
+        "masterAttrValShortName":"4 CO ",
+        "masterAttrValLongName":"4 CORNERS ",
+        "isDefaultVal":false,
+        "classAttrSkey":6
+      },
+      {
+        "masterAttrValSkey":24,
+        "classAttrValSkey":26,
+        "masterAttrValCode":"07059\t ",
+        "masterAttrValShortName":"BLEN ",
+        "masterAttrValLongName":"BLEND NO 54 ",
+        "isDefaultVal":false,
+        "classAttrSkey":6
+      },
+      {
+        "masterAttrValSkey":25,
+        "classAttrValSkey":27,
+        "masterAttrValCode":"00951\t ",
+        "masterAttrValShortName":"TURK ",
+        "masterAttrValLongName":"TURKISH ",
+        "isDefaultVal":false,
+        "classAttrSkey":6
+      },
+      {
+        "masterAttrValSkey":29,
+        "classAttrValSkey":31,
+        "masterAttrValCode":"00419\t ",
+        "masterAttrValShortName":"VIRG ",
+        "masterAttrValLongName":"VIRGINIA BLEND ",
+        "isDefaultVal":false,
+        "classAttrSkey":6
+      },
+      {
+        "masterAttrValSkey":31,
+        "classAttrValSkey":33,
+        "masterAttrValCode":"07004\t ",
+        "masterAttrValShortName":"VOYA ",
+        "masterAttrValLongName":"VOYAGER ",
+        "isDefaultVal":false,
+        "classAttrSkey":6
+      },
+      {
+        "masterAttrValSkey":20,
+        "classAttrValSkey":22,
+        "masterAttrValCode":"00009\t ",
+        "masterAttrValShortName":"ADVA ",
+        "masterAttrValLongName":"ADVANCE ",
+        "isDefaultVal":false,
+        "classAttrSkey":6
+      },
+      {
+        "masterAttrValSkey":26,
+        "classAttrValSkey":28,
+        "masterAttrValCode":"04106\t ",
+        "masterAttrValShortName":"U.S. ",
+        "masterAttrValLongName":"U.S. GROWN ",
+        "isDefaultVal":false,
+        "classAttrSkey":6
+      },
+      {
+        "masterAttrValSkey":27,
+        "classAttrValSkey":29,
+        "masterAttrValCode":"00445\t ",
+        "masterAttrValShortName":"ULTI ",
+        "masterAttrValLongName":"ULTIMA ",
+        "isDefaultVal":false,
+        "classAttrSkey":6
+      }
+    ],
+    "fieldType":"Combo"
+  },
+  {
+    "masterAttrType":"Text(50) ",
+    "industrySegment":"CIGARETTES ",
+    "industrySector":"TOB ",
+    "masterAttrName":"BrandExtension ",
+    "masterAttrDisplayName":"Brand Extension ",
+    "masterAttrBusImp":"Primary ",
+    "masterAttrDisplaySeq":4,
+    "masterAttrDescSeq":4,
+    "industryClass":"Cigarettes",
+    "attrSkey":5,
+    "classAttrSkey":20,
+    "masterAttributeChoices":[
+      {
+        "masterAttrValSkey":33,
+        "classAttrValSkey":96,
+        "masterAttrValCode":" ",
+        "masterAttrValShortName":" ",
+        "masterAttrValLongName":" ",
+        "isDefaultVal":true,
+        "classAttrSkey":20
+      }
+    ],
+    "fieldType":"Text",
+    "fieldLength":"xt("
+  },
+  {
+    "masterAttrType":"Text(50) ",
+    "industrySegment":"CIGARETTES ",
+    "industrySector":"TOB ",
+    "masterAttrName":"UnitOfMeasure ",
+    "masterAttrDisplayName":"Unit Of Measure ",
+    "masterAttrBusImp":"Primary ",
+    "masterAttrDisplaySeq":5,
+    "masterAttrDescSeq":5,
+    "industryClass":"Cigarettes",
+    "attrSkey":1,
+    "classAttrSkey":13,
+    "masterAttributeChoices":[
+      {
+        "masterAttrValSkey":39,
+        "classAttrValSkey":72,
+        "masterAttrValCode":"006\t ",
+        "masterAttrValShortName":"Roll ",
+        "masterAttrValLongName":"Roll/Sleeve ",
+        "isDefaultVal":false,
+        "classAttrSkey":13
+      },
+      {
+        "masterAttrValSkey":40,
+        "classAttrValSkey":73,
+        "masterAttrValCode":"007\t ",
+        "masterAttrValShortName":"Half ",
+        "masterAttrValLongName":"Half Carton ",
+        "isDefaultVal":false,
+        "classAttrSkey":13
+      },
+      {
+        "masterAttrValSkey":35,
+        "classAttrValSkey":68,
+        "masterAttrValCode":"002\t ",
+        "masterAttrValShortName":"Each ",
+        "masterAttrValLongName":"Each ",
+        "isDefaultVal":false,
+        "classAttrSkey":13
+      },
+      {
+        "masterAttrValSkey":38,
+        "classAttrValSkey":71,
+        "masterAttrValCode":"005\t ",
+        "masterAttrValShortName":"Pouc ",
+        "masterAttrValLongName":"Pouch/Bag ",
+        "isDefaultVal":false,
+        "classAttrSkey":13
+      },
+      {
+        "masterAttrValSkey":34,
+        "classAttrValSkey":67,
+        "masterAttrValCode":"001\t ",
+        "masterAttrValShortName":"Pack ",
+        "masterAttrValLongName":"Pack ",
+        "isDefaultVal":true,
+        "classAttrSkey":13
+      },
+      {
+        "masterAttrValSkey":41,
+        "classAttrValSkey":74,
+        "masterAttrValCode":"008\t ",
+        "masterAttrValShortName":"Tub ",
+        "masterAttrValLongName":"Tub ",
+        "isDefaultVal":false,
+        "classAttrSkey":13
+      },
+      {
+        "masterAttrValSkey":36,
+        "classAttrValSkey":69,
+        "masterAttrValCode":"003\t ",
+        "masterAttrValShortName":"Cart ",
+        "masterAttrValLongName":"Carton ",
+        "isDefaultVal":false,
+        "classAttrSkey":13
+      },
+      {
+        "masterAttrValSkey":37,
+        "classAttrValSkey":70,
+        "masterAttrValCode":"004\t ",
+        "masterAttrValShortName":"Can/ ",
+        "masterAttrValLongName":"Can/Tin ",
+        "isDefaultVal":false,
+        "classAttrSkey":13
+      }
+    ],
+    "fieldType":"Combo"
+  },
+  {
+    "masterAttrType":"Integer ",
+    "industrySegment":"CIGARETTES ",
+    "industrySector":"TOB ",
+    "masterAttrName":"UPCUnits ",
+    "masterAttrDisplayName":"UPC Units ",
+    "masterAttrBusImp":"Primary ",
+    "masterAttrDisplaySeq":6,
+    "masterAttrDescSeq":6,
+    "industryClass":"Cigarettes",
+    "attrSkey":12,
+    "classAttrSkey":15,
+    "masterAttributeChoices":[
+      {
+        "masterAttrValSkey":42,
+        "classAttrValSkey":79,
+        "masterAttrValCode":" ",
+        "masterAttrValShortName":" ",
+        "masterAttrValLongName":" ",
+        "isDefaultVal":true,
+        "classAttrSkey":15
+      }
+    ],
+    "fieldType":"Integer"
+  }
+]

@@ -1,0 +1,40 @@
+<!--Navbar Heading-->
+<div class="container-main">
+  <div class="card-title dark-blue center page-header-text">
+    Manual Matching
+  </div>
+</div>
+
+<div class="card main-detail">
+  <div>
+    <div #sourceInfoEl class="row" [class.fixed-source-info-box]="fixedSourceInfoBox"
+        [class.fixed-source-info-box-mm]="fixedSourceInfoBox">
+      <source-info [info]="sourceInfo"></source-info>
+    </div>
+    <div class="separator" style="margin-top: 15px;"></div>
+    <comments [limit]="3" [comments]="comments"></comments>
+  </div>
+  <br/>
+  <div class="row">
+    <div class="pull-left">
+      <button class="btn grey-btn" (click)="createNewMaster()">Create New Master</button>
+    </div>
+    <div class="pull-right">
+      <button class="btn grey-btn btns">Reassign</button>
+      <button class="btn grey-btn btns">Skip</button>
+    </div>
+  </div>
+</div>
+
+<div class="card main-detail">
+  <external-resources [withDefaultResources]="true" [attributeForm]="searchForm" [resources]="externalResources"></external-resources>
+</div>
+
+<div class="card main-detail" style="padding: 0 0 20px 0;">
+  <item-search-tab-view *ngIf="showSearchForm" [inputSearchQuery]="matchedAttrs" [itemViewOptions]="itemViewOptions"
+    [initialResults]="suggestion.items"
+    (onSearchValueChange)="onSearchValueChanged($event)">
+  </item-search-tab-view>
+</div>
+
+<emdm-go-to-top></emdm-go-to-top>

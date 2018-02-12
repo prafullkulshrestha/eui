@@ -1,0 +1,15 @@
+<div class="info-box" *ngIf="info">
+  <div class="small-label" style="margin-bottom: 10px;">{{info.orgName}}</div>
+  <div class="row">
+    <div class="col-md-2"><strong>Store Number</strong></div>
+    <div class="col-md-4"><strong>Address</strong></div>
+    <div class="col-md-2"><strong>Source System</strong></div>
+    <div class="col-md-4"><strong>Submitter Name</strong></div>
+  </div>
+  <div class="row">
+    <div class="col-md-2">{{info.orgNum}}</div>
+    <div class="col-md-4">{{info.address}}</div>
+    <div class="col-md-2">{{info.srcSystem}}</div>
+    <div class="col-md-4">{{info.submittedBy}}</div>
+  </div>
+</div>

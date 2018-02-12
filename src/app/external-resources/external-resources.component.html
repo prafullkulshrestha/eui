@@ -1,0 +1,10 @@
+<emdm-collapsible-panel [titleTextSize]="'large'" [hideBorder]="true" [info]="resources.length">
+    <div header>External Research Resources</div>
+    <div content *ngIf="resources.length > 0" class="row">
+        <div *ngFor="let resource of resources; let i = index;" class="external-resource pull-left">
+            <div class="wordwrap"><label>{{resource.linkName | ellipsis:30}}</label></div>
+            <div class="wordwrap" style="font-size: 14px;">{{resource.linkDesc | ellipsis:50}}</div>
+            <div class="view-link"><button (click)="openLink(i)" class="btn btn-primary">View Link</button></div>
+        </div>
+    </div>
+</emdm-collapsible-panel>

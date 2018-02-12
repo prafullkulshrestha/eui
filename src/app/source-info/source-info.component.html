@@ -1,0 +1,17 @@
+<div class="info-box" *ngIf="info">
+  <div class="small-label" style="margin-bottom: 10px;">Source Description</div>
+  <div class="row">
+    <div class="col-md-2"><strong>Source</strong></div>
+    <div class="col-md-2"><strong>Standardized UPC</strong></div>
+    <div class="col-md-2"><strong>UPC</strong></div>
+    <div class="col-md-2"><strong>UOM</strong></div>
+    <div class="col-md-4"><strong>Description</strong></div>
+  </div>
+  <div class="row">
+    <div class="col-md-2">{{info.srcSystem}}</div>
+    <div class="col-md-2">{{info.standardizedUPC}}</div>
+    <div class="col-md-2">{{info.upc}}</div>
+    <div class="col-md-2">{{info.uom}}</div>
+    <div class="col-md-4">{{info.upcDesc}}</div>
+  </div>
+</div>

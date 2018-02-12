@@ -1,0 +1,16 @@
+.external-resource {
+  position: relative;
+  box-sizing: border-box;
+  width: 20%;
+  height: 210px;
+  padding: 10px;
+  background: #F2F1F0;
+  border: 10px solid white;
+}
+
+.view-link {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 7px;
+}

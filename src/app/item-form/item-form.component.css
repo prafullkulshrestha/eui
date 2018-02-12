@@ -1,0 +1,60 @@
+.camera-icon{
+  color: white;
+  z-index: 1;
+  position: relative;
+  top: 38%;
+  left: 39%;
+  font-size: larger;
+}
+
+.camera-icon-box{
+  height: 80px; 
+  width: 97px;
+  background-color: gray;
+  z-index: 0;
+  cursor: pointer;
+}
+
+.toggle-container {
+    padding: 10px 0;
+}
+
+.toggle-button {
+    width: 94px;
+}
+
+.toggle-container .or-separator{
+    height: 20px;
+    width: 20px;
+    margin-left: -12px;
+    margin-right: -12px;
+    position: relative;
+    border-radius: 50%;
+    display: inline-block;
+    background-color: #fff;
+    text-align: center;
+    z-index: 20;
+    color: #828080;
+    line-height: 1.9;
+    font-size: 10px;
+}
+:host /deep/ .ui-button {
+    border-left: 1px none;
+    border-top: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    border-bottom-right-radius: 4px;
+    border-top-right-radius: 4px;
+    color: #005481;
+    background: #FFFFFF;
+    transition: background-color .2s;
+}
+
+:host /deep/ .ui-inputtext {
+    width: 130px;
+    border-radius: 4px;
+    border-right: none;
+    background: #ffffff;
+    color: #222222;
+    transition: .2s;
+}

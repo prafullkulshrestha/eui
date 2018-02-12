@@ -1,0 +1,311 @@
+<div *ngIf="saveFormActive">
+  <div class="row text-center toggle-container" [style.padding-top]="sourceInfo!==null ? '10px' : 0">
+    <button class="btn toggle-button" (click)="item.typeToggle.value='individual'" [ngClass]="{'btn-primary':item.typeToggle.value==='individual','grey-btn':item.typeToggle.value!=='individual'}"
+      [disabled]="item.typeToggle.disabled || mode==='editPublished'">Individual</button>
+    <span class="or-separator">or</span>
+    <button class="btn toggle-button" (click)="item.typeToggle.value='combo'" [ngClass]="{'btn-primary':item.typeToggle.value==='combo','grey-btn':item.typeToggle.value!=='combo'}"
+      [disabled]="item.typeToggle.disabled || mode==='editPublished'">Combo</button>
+  </div>
+
+  <div class="row" style="margin-right: 15px;">
+    <div class="pull-left">
+      <div class="camera-icon-box" data-toggle="modal" data-target="#imageViewModal">
+        <i *ngIf="!item.imageUrl" class="fa fa-camera camera-icon" aria-hidden="true"></i>
+        <img class="stretch" *ngIf="item.imageUrl" [src]="item.imageUrl">
+      </div>
+      <div style="margin-top: 2px" class="btn btn-primary upload-btn" onclick="javascript:document.getElementById('file1').click();">
+        <input ng2FileSelect id="file1" type="file" accept="image/*" [uploader]="uploader" style="display: none" (change)="onSelectFile($event)"
+        /> Upload
+      </div>
+    </div>
+
+    <div style="margin-left: 115px;">
+      <div style="margin-bottom: 15px">
+        <span style="margin-right: 15px;">Item Description</span>
+        <div class="btn-group">
+          <button class="btn btn-default item-desc-type" [ngClass]="{'btn-primary': !editingShortDesc}" (click)="showEditDesc(false)">Attribute Generated</button>
+          <button class="btn btn-default item-desc-type" [ngClass]="{'btn-primary': editingShortDesc}" (click)="showEditDesc(true)">Manual Entry</button>
+        </div>
+      </div>
+      <div *ngIf="!editingShortDesc">
+        <div *ngIf="shortDescByAttr" class="small-label">{{shortDescByAttr}}</div>
+        <i *ngIf="!shortDescByAttr">No item description available</i>
+      </div>
+      <div *ngIf="editingShortDesc">
+        <textarea class="form-control" [(ngModel)]="shortDesc"></textarea>
+      </div>
+    </div>
+  </div>
+  <strong *ngIf="item.imageUrl">{{ imageFileName }}</strong>
+</div>
+
+<div [hidden]="!saveFormActive" class="small-label" style="line-height: 50px;">Primary Attributes</div>
+
+<!-- Start - Item type form displaying the list of sector, segemnt and class -->
+<form *ngIf="qualifierFormActive" [formGroup]="itemQualifierForm">
+  <div class="row">
+    <div class="col-md-4 attr-container">
+      <div class="attr-label">Sector</div>
+      <div class="attr-field">
+        <emdm-dropdown [items]="sectors" [disable]="mode!=='create'" formControlName="sector"></emdm-dropdown>
+      </div>
+      <div class="validation-msg text-danger"></div>
+    </div>
+
+    <div class="col-md-4 attr-container">
+      <div class="attr-label">Segment</div>
+      <div class="attr-field">
+        <emdm-dropdown [items]="segments" [disable]="mode!=='create'" formControlName="segment"></emdm-dropdown>
+      </div>
+      <div class="validation-msg text-danger"></div>
+    </div>
+
+    <div class="col-md-4 attr-container">
+      <div class="attr-label">Class</div>
+      <div class="attr-field">
+        <emdm-dropdown [items]="classes" [disable]="mode!=='create'" formControlName="class"></emdm-dropdown>
+      </div>
+      <div class="validation-msg text-danger"></div>
+    </div>
+  </div>
+</form>
+<!-- End - Item type form -->
+
+<!-- Start - Item attributes form to create and save a new item -->
+<form *ngIf="saveFormActive" [formGroup]="itemSaveForm">
+  <div class="col-md-4 attr-container">
+    <div class="attr-label">UPC</div>
+    <div class="attr-field">
+      <input type="text" class="text-input form-control" formControlName="upc"
+        [class.control-validation-error]="formErrors.upc" />
+    </div>
+    <div class="validation-msg text-danger">
+      <div *ngIf="formErrors.upc">{{ formErrors.upc }}</div>
+    </div>
+  </div>
+
+  <div class="row" formArrayName="primaryAttributesFormArray">
+    <div class="col-md-4 attr-container" *ngFor="let attr of itemSaveForm.controls.primaryAttributesFormArray.controls; let i = index;">
+      <div class="attr-label">{{item.primaryAttributes[i].masterAttrDisplayName}}</div>
+      <div class="attr-field" *ngIf="item.primaryAttributes[i].fieldType==='TEXT'">
+        <input type="text" class="text-input form-control" [formControl]="attr" [(ngModel)]="item.primaryAttributes[i].attrValue"
+          [class.control-validation-error]="formErrors.primaryAttributesFormArray[i]" />
+      </div>
+      <div class="attr-field" *ngIf="item.primaryAttributes[i].fieldType==='number'">
+        <input type="text" class="text-input form-control" [formControl]="attr" [(ngModel)]="item.primaryAttributes[i].attrValue"
+          [class.control-validation-error]="formErrors.primaryAttributesFormArray[i]" (keydown.space)="$event.preventDefault();"
+        />
+      </div>
+      <div class="attr-field" *ngIf="item.primaryAttributes[i].fieldType==='COMBO'">
+        <emdm-combobox [attrValList]="item.primaryAttributes[i].masterAttributeChoices" [formControl]="attr" [(ngModel)]="item.primaryAttributes[i].attrValue"
+          [invalid]="formErrors.primaryAttributesFormArray[i]">
+        </emdm-combobox>
+      </div>
+      <div class="validation-msg text-danger">
+        <div *ngIf="formErrors.primaryAttributesFormArray[i]">{{ formErrors.primaryAttributesFormArray[i] }}</div>
+      </div>
+    </div>
+  </div>
+  <hr class="separator">
+
+  <emdm-collapsible-panel #secondaryAttrsPanel [info]="secondaryAttrsFillProportion">
+    <div header>Secondary Attributes</div>
+    <div content class="row" formArrayName="secondaryAttributesFormArray">
+      <div class="col-md-4 attr-container" *ngFor="let attr of itemSaveForm.controls.secondaryAttributesFormArray.controls; let i = index;">
+        <div class="attr-label">{{item.secondaryAttributes[i].masterAttrDisplayName}}</div>
+        <div class="attr-field" *ngIf="item.secondaryAttributes[i].fieldType==='TEXT'">
+          <input type="text" class="text-input form-control" [formControl]="attr" [(ngModel)]="item.secondaryAttributes[i].attrValue"
+            [class.control-validation-error]="formErrors.secondaryAttributesFormArray[i]" />
+        </div>
+        <div class="attr-field" *ngIf="item.secondaryAttributes[i].fieldType==='number'">
+          <input type="text" class="text-input form-control" [formControl]="attr" [(ngModel)]="item.secondaryAttributes[i].attrValue"
+            [class.control-validation-error]="formErrors.secondaryAttributesFormArray[i]" (keydown.space)="$event.preventDefault();"
+          />
+        </div>
+        <div class="attr-field" *ngIf="item.secondaryAttributes[i].fieldType==='COMBO'">
+          <emdm-combobox [attrValList]="item.secondaryAttributes[i].masterAttributeChoices" [formControl]="attr" [(ngModel)]="item.secondaryAttributes[i].attrValue"
+            [invalid]="formErrors.secondaryAttributesFormArray[i]">
+          </emdm-combobox>
+        </div>
+        <div class="validation-msg text-danger">
+          <div *ngIf="formErrors.secondaryAttributesFormArray[i]">{{ formErrors.secondaryAttributesFormArray[i] }}</div>
+        </div>
+      </div>
+    </div>
+  </emdm-collapsible-panel>
+  <emdm-collapsible-panel>
+    <div header>Effective Dates</div>
+    <div content class="row">
+      <div class="col-md-2 attr-container">
+        <div class="attr-label">Start Date</div>
+        <div class="attr-field">
+          <p-calendar formControlName='effectiveStartDate' yearRange="1900:2999" required [showIcon]="true" [monthNavigator]="true"
+            [yearNavigator]="true" dateFormat="mm/dd/yy" [class.control-validation-error]="formErrors.effectiveStartDate"></p-calendar>
+        </div>
+        <div class="validation-msg text-danger">
+          <div *ngIf="formErrors.effectiveStartDate">{{ formErrors.effectiveStartDate }}</div>
+        </div>
+      </div>
+      <div class="col-md-10 attr-container">
+        <div class="attr-label">End Date</div>
+        <div class="attr-field">
+          <p-calendar formControlName='effectiveEndDate' yearRange="1900:2999" required [showIcon]="true" [monthNavigator]="true" [yearNavigator]="true"
+            dateFormat="mm/dd/yy" [class.control-validation-error]="formErrors.effectiveEndDate"></p-calendar>
+        </div>
+        <div class="validation-msg text-danger">
+          <div *ngIf="formErrors.effectiveEndDate">{{ formErrors.effectiveEndDate }}</div>
+        </div>
+      </div>
+    </div>
+  </emdm-collapsible-panel>
+  <emdm-collapsible-panel #componentItemsPanel *ngIf="item.typeToggle.value==='combo'" [info]="component.items.length">
+    <div header>
+      Component Items
+      <button class="btn btn-primary item-desc-type" style="margin-left: 35px;" (click)="findComonentItems($event)">
+            Find Items
+          </button>
+    </div>
+    <div content>
+      <div *ngFor="let componentItem of component.items" class="combo-item">
+        <div combo-item [item]="componentItem" [mode]="'edit'"></div>
+      </div>
+      <div *ngIf="component.items.length===0" class="info-box" style="margin: 10px 0;">
+        There are no Item linked to Master Item yet. Please click on the Find Items button to search and link Item Master Records.
+      </div>
+    </div>
+  </emdm-collapsible-panel>
+
+  <comments [limit]="3" [comments]="item.comments"></comments>
+
+  <br/>
+  <div class="row">
+    <div class="pull-left">
+      <button class="btn grey-btn btns" (click)="resetToInitialForm()">Cancel</button>
+      <button *ngIf="mode!=='editPublished' && item.state === 'DRAFT'" class="btn btn-danger btns" (click)="confirmDeleteDraft()">Delete</button>
+    </div>
+    <div class="pull-right">
+      <button *ngIf="mode!=='editPublished'" class="btn grey-btn btns">Reassign</button>
+      <button *ngIf="mode!=='editPublished'" class="btn grey-btn btns" (click)="onSave()">Save Draft</button>
+      <button *ngIf="mode!=='editPublished'" class="btn btn-primary btns" (click)="onCommit()" [class.disabled]="!isPublishable" [disabled]="!isPublishable ? 'disabled': ''"
+        [title]="!isPublishable ? 'To Publish an item master all primary attributes must have valid values': ''">
+            Publish
+      </button>
+
+      <button *ngIf="mode==='editPublished'" class="btn btn-primary btns" (click)="onCommit()" [class.disabled]="!isPublishable" [disabled]="!isPublishable ? 'disabled': ''"
+        [title]="!isPublishable ? 'To update an item master all primary attributes must have valid values': ''">
+            Update
+      </button>
+    </div>
+  </div>
+
+</form>
+<!-- End - Item attributes form -->
+
+
+<!-- Modals -->
+
+<!--- Search Combo Component Item modal -->
+<div id="searchComponentItemModal" class="modal fade" role="dialog" tabindex="-1">
+  <div class="modal-dialog modal-custom-xl" style="z-index: 9999;">
+    <!-- Modal content -->
+    <div class="modal-content">
+      <div class="modal-body" style="padding: 0 0 20px 0;">
+        <item-search-tab-view *ngIf="component.showModal" [inputSearchQuery]="component.reqObj" [itemViewOptions]="component.viewOptions"
+          [disableOptions]="component.disableOptions" (onSearchValueChange)="onComboSearchValueChanged($event)">
+        </item-search-tab-view>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- View Image Modal-->
+<div #imageViewModal *ngIf="item.imageUrl" id="imageViewModal" class="modal fade" role="dialog" tabindex="-1">
+  <div class="modal-dialog" style="z-index: 9999">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <button type="button" class="close close-icon" data-dismiss="modal">&times;</button>
+      <img style="width: 100%" *ngIf="item.imageUrl" [src]="item.imageUrl">
+    </div>
+
+  </div>
+</div>
+
+<!-- Invalidate File Extension Modal -->
+<emdm-modal #invalidImageFileExtModal [title]="'Invalid file selected'">
+  <div class="modal-body">
+    {{invalidImageFileExtMsg}}
+  </div>
+  <div class="modal-footer">
+    <div class="row">
+      <div class="pull-right">
+        <button class="btn btn-primary" data-dismiss="modal">Ok</button>
+      </div>
+    </div>
+  </div>
+</emdm-modal>
+
+<!--- Delete Draft Modal -->
+<emdm-modal #deleteDraftModal [title]="'Need confirmation'">
+  <div class="modal-body">
+    Are you sure you want to delete this draft?
+  </div>
+  <div class="modal-footer">
+    <div class="row">
+      <div class="pull-right">
+        <button class="btn btn-default" (click)="deleteItemDraft()" data-dismiss="modal">Yes, I confirm</button>
+        <button class="btn btn-primary" data-dismiss="modal">Cancel</button>
+      </div>
+    </div>
+  </div>
+</emdm-modal>
+
+<!-- Delete Draft Status Modal -->
+<emdm-modal #deleteDraftStatusModal [title]="'Draft delete status'">
+  <div class="modal-body">
+    {{deleteDraftMsg}}
+  </div>
+  <div class="modal-footer">
+    <div class="row">
+      <div class="pull-right">
+        <button class="btn btn-primary" (click)="navigateToDashboard()">Ok</button>
+      </div>
+    </div>
+  </div>
+</emdm-modal>
+
+<!-- Item Publish Server Validation Errors -->
+<emdm-modal #serverValidationModal [title]="'Please correct below errors'">
+  <div class="modal-body">
+    <ul>
+      <li *ngFor="let error of serverValidationErrors" class="validation-msg" style="height: auto;">
+        {{error.message}}
+      </li>
+    </ul>
+  </div>
+
+  <div class="modal-footer">
+    <div class="row">
+      <div class="pull-right">
+        <button class="btn btn-primary" data-dismiss="modal">Ok</button>
+      </div>
+    </div>
+  </div>
+</emdm-modal>
+
+<!-- Confirm Publish Modal -->
+<emdm-modal #confirmPublishModal [title]="'Invalid UPC'">
+  <div class="modal-body">
+    The entered UPC is invalid. Are you sure you want to publish this item?
+  </div>
+  <div class="modal-footer">
+    <div class="row">
+      <div class="pull-right">
+        <button class="btn btn-default" (click)="onConfirmPublish()" data-dismiss="modal">Yes, I confirm</button>
+        <button class="btn btn-primary" data-dismiss="modal">Cancel</button>
+      </div>
+    </div>
+  </div>
+</emdm-modal>
+
+<!-- End - Modals -->

@@ -1,0 +1,43 @@
+.comp-item-container {
+    background-color: #f2f2f2;
+}
+
+.comp-item-action-box {
+    background-color: #A0A0A0;
+    padding: 15px 25px;
+}
+
+.action-btns-container {
+    padding-left: 20px;
+}
+
+.quantity {
+    color: white; 
+    margin-bottom: 5px;
+}
+
+.mini-input {
+    height: 28px;
+    font-size: 14px;
+    padding: 0 6px;
+}
+
+.mini-button {
+    height: 28px;
+    font-size: 14px;
+    padding: 0 10px;
+}
+
+.invalid-input {
+    border: 1px solid #a94442;
+}
+
+.quantity-error-msg {
+    margin-top: 5px;
+    font-size: 14px;
+}
+
+.view-box {
+    background: white;
+    padding: 10px 20px;
+}

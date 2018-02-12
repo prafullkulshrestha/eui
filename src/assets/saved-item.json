@@ -1,0 +1,205 @@
+{
+  "itemSkey": 567,
+  "industrySector": "TOBACCO",
+  "industrySegment": "CIGARETTES",
+  "industryClass": "CIGARETTES",
+  "upc": "91724719240934",
+  "reasonForChange": "Newly Created",
+  "longDescription": "Cigarette",
+  "shortDescription": "Cigarette",
+  "status": "ACTIVE",
+  "attributes": [
+    {
+      "attrName": "SIZE",
+      "attrValue": {
+        "attrCode": "090",
+        "attrLongName": "090",
+        "attrShortName": "90",
+        "classAttrValSkey": 1301
+      }
+    },
+    {
+      "attrName": "BRAND",
+      "attrValue": {
+        "attrCode": "07014",
+        "attrLongName": "CRUSH",
+        "attrShortName": "CRSH",
+        "classAttrValSkey": 1104
+      }
+    },
+    {
+      "attrName": "FLAVOR",
+      "attrValue": {
+        "attrCode": "ZZZ",
+        "attrLongName": "NONE",
+        "attrShortName": "NONE",
+        "classAttrValSkey": 1713
+      }
+    },
+    {
+      "attrName": "MENTHOL",
+      "attrValue": {
+        "attrCode": "2",
+        "attrLongName": "MENTHOL",
+        "attrShortName": "MN",
+        "classAttrValSkey": 1504
+      }
+    },
+    {
+      "attrName": "DOMESTIC",
+      "attrValue": {
+        "attrCode": "D",
+        "attrLongName": "DOMESTIC",
+        "attrShortName": "",
+        "classAttrValSkey": 1380
+      }
+    },
+    {
+      "attrName": "STRENGTH",
+      "attrValue": {
+        "attrCode": "07",
+        "attrLongName": "EXTRA LIGHT",
+        "attrShortName": "EX LT",
+        "classAttrValSkey": 1606
+      }
+    },
+    {
+      "attrName": "TAR_LEVEL",
+      "attrValue": {
+        "attrCode": "20",
+        "attrLongName": "20 MG",
+        "attrShortName": "",
+        "classAttrValSkey": 1688
+      }
+    },
+    {
+      "attrName": "TIP_COLOR",
+      "attrValue": {
+        "attrCode": "2",
+        "attrLongName": "WHITE",
+        "attrShortName": "",
+        "classAttrValSkey": 1676
+      }
+    },
+    {
+      "attrName": "UPC_UNITS",
+      "attrValue": "100"
+    },
+    {
+      "attrName": "PRICE_TIER",
+      "attrValue": {
+        "attrCode": "99",
+        "attrLongName": "UNRESOLVABLE",
+        "attrShortName": "",
+        "classAttrValSkey": 1382
+      }
+    },
+    {
+      "attrName": "FILTER_TYPE",
+      "attrValue": {
+        "attrCode": "01",
+        "attrLongName": "NON CHARCOAL",
+        "attrShortName": "NC",
+        "classAttrValSkey": 1333
+      }
+    },
+    {
+      "attrName": "BRAND_FAMILY",
+      "attrValue": {
+        "attrCode": "068",
+        "attrLongName": "BRIGHT (CIGS)",
+        "attrShortName": "BRIGHT",
+        "classAttrValSkey": 1039
+      }
+    },
+    {
+      "attrName": "MANUFACTURER",
+      "attrValue": {
+        "attrCode": "03J",
+        "attrLongName": "VECTOR TOBACCO (USA) LTD.",
+        "attrShortName": "",
+        "classAttrValSkey": 1748
+      }
+    },
+    {
+      "attrName": "PACKING_TYPE",
+      "attrValue": {
+        "attrCode": "H1",
+        "attrLongName": "PACK - HARD BOX",
+        "attrShortName": "BX",
+        "classAttrValSkey": 1007
+      }
+    },
+    {
+      "attrName": "SIGNER_BRAND",
+      "attrValue": {
+        "attrCode": "S",
+        "attrLongName": "SUBSEQUENT",
+        "attrShortName": "",
+        "classAttrValSkey": 978
+      }
+    },
+    {
+      "attrName": "SIGNER_GROUP",
+      "attrValue": {
+        "attrCode": "R",
+        "attrLongName": "RETURN",
+        "attrShortName": "",
+        "classAttrValSkey": 1572
+      }
+    },
+    {
+      "attrName": "CIGS_PER_PACK",
+      "attrValue": "12"
+    },
+    {
+      "attrName": "CIRCUMFERENCE",
+      "attrValue": {
+        "attrCode": "4",
+        "attrLongName": "WIDE",
+        "attrShortName": "WD",
+        "classAttrValSkey": 1580
+      }
+    },
+    {
+      "attrName": "BRAND_EXTENSION",
+      "attrValue": {
+        "attrCode": "ZZ",
+        "attrLongName": "NONE",
+        "attrShortName": "NONE",
+        "classAttrValSkey": 1282
+      }
+    },
+    {
+      "attrName": "UNIT_OF_MEASURE",
+      "attrValue": {
+        "attrCode": "001",
+        "attrLongName": "Pack",
+        "attrShortName": "",
+        "classAttrValSkey": 1579
+      }
+    },
+    {
+      "attrName": "PACKS_PER_CARTON",
+      "attrValue": "144"
+    },
+    {
+      "attrName": "COUNTRY_OF_ORIGIN",
+      "attrValue": {
+        "attrCode": "UY",
+        "attrLongName": "URUGUAY",
+        "attrShortName": "",
+        "classAttrValSkey": 1525
+      }
+    },
+    {
+      "attrName": "SIGNER_MANUFACTURER",
+      "attrValue": {
+        "attrCode": "340",
+        "attrLongName": "340",
+        "attrShortName": "",
+        "classAttrValSkey": 1446
+      }
+    }
+  ]
+}

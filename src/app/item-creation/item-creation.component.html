@@ -1,0 +1,198 @@
+<!--Navbar Heading-->
+<div class="container-main">
+  <div *ngIf="mode!=='editPublished'" class="card-title dark-blue center page-header-text">Item Creation</div>
+  <div *ngIf="mode==='editPublished'" class="card-title dark-blue center">Master Item Edit Record</div>
+  <div *ngIf="mode!=='editPublished' && saveFormLoaded" class="row" 
+      [class.fixed-publish-progress-bar]="fixedPublishProgressBar">
+    <div class="col-md-12">
+      <emdm-progress-bar [progress]="publishProgress">
+        Publishable <i class="fa fa-info-circle"></i>
+      </emdm-progress-bar>
+    </div>
+  </div>
+</div>
+
+<div class="card main-detail">
+  <div>
+    <div *ngIf="showWelcomeMessage" class="big-label">Let's get started!</div>
+    <div #sourceInfoEl class="row" [class.fixed-source-info-box]="fixedSourceInfoBox">
+      <source-info [info]="sourceInfo"></source-info>
+    </div>
+    <p *ngIf="showWelcomeMessage">Select values for the following fields to help us find related Item Master Records.</p>
+  </div>
+
+  <item-form *ngIf="loadItemForm" [item]="item" [workflowItem]="sourceInfo" [mode]="mode" (onItemFormChange)="onItemFormChanged($event)"></item-form>
+</div>
+
+<!--- External Resources -->
+<div *ngIf="saveFormLoaded" class="card main-detail">
+  <external-resources [attributeForm]="itemSaveForm" [resources]="externalResources"></external-resources>
+</div>
+
+<!--- Related items displaying the results -->
+<div *ngIf="mode!=='editPublished' && saveFormLoaded">
+  <div *ngIf="saveFormLoaded" class="row">
+    <label class="title-label">Related Master Item Records</label>
+    <button class="btn btn-primary refresh-button" (click)="loadRelatedItems(true)">Refresh</button>
+  </div>
+
+  <div class="card main-detail">
+    <item-search [query]="relatedItem.searchReqObj" [itemViewOptions]="relatedItem.itemViewOptions"></item-search>
+  </div>
+
+  <!--- Item Clone Modal -->
+  <div *ngIf="relatedItem.current" class="modal fade" id="itemCloneModal" role="dialog" tabindex="-1">
+    <div class="modal-dialog modal-lg" style="z-index: 9999;">
+      <!-- Modal content -->
+      <div class="modal-content">
+        <div class="modal-body">
+          <div class="row">
+            <div class="col-md-6">
+              <div class="big-label">New Item</div>
+            </div>
+            <div class="col-md-6">
+              <div class="big-label" style="margin-left: -7px;">Related Item</div>
+            </div>
+          </div>
+
+          <div class="attrs-container">
+            <div class="row">
+              <div class="col-md-6" style="padding-right: 10px;">
+                <!-- Start - Clone new item form -->
+                <form *ngIf="newItemFormActive" [formGroup]="newItemForm">
+                  <div class="clone-item-container">
+                    <div>Item Description</div>
+                    <div class="small-label ellipsis" style="height: 24px;" [title]="getItemDesc(newItem.primaryAttributes, newItem.secondaryAttributes, 'short')">
+                      {{ getItemDesc(newItem.primaryAttributes, newItem.secondaryAttributes, 'short') }}
+                    </div>
+                    <label class="attr-header">Primary Attributes</label>
+
+                    <div class="row">
+                      <div class="col-md-12 attr-box">
+                        <div>UPC</div>
+                        <div class="attr-field">
+                          <input type="text" class="text-input form-control" name="upc" formControlName="upc" [(ngModel)]="newItem.upc" />
+                        </div>
+                      </div>
+                      <div class="col-md-12 attr-box">
+                        <div>Sector</div>
+                        <div class="attr-value">{{newItem.sector}}</div>
+                      </div>
+                      <div class="col-md-12 attr-box">
+                        <div>Segment</div>
+                        <div class="attr-value">{{newItem.segment}}</div>
+                      </div>
+                      <div class="col-md-12 attr-box">
+                        <div>Class</div>
+                        <div class="attr-value">{{newItem.class}}</div>
+                      </div>
+
+                      <div class="row" formArrayName="primaryAttributesFormArray">
+                        <div class="col-md-12 attr-box" *ngFor="let attr of newItemForm.controls.primaryAttributesFormArray.controls; let i = index;">
+                          <div>{{newItem.primaryAttributes[i].masterAttrDisplayName}}</div>
+                          <div class="attr-field" *ngIf="newItem.primaryAttributes[i].fieldType==='TEXT'">
+                            <input type="text" class="text-input form-control" [formControl]="attr" [(ngModel)]="newItem.primaryAttributes[i].attrValue"
+                            />
+                          </div>
+                          <div class="attr-field" *ngIf="newItem.primaryAttributes[i].fieldType==='number'">
+                            <input type="text" class="text-input form-control" [formControl]="attr" [(ngModel)]="newItem.primaryAttributes[i].attrValue"
+                            />
+                          </div>
+                          <div class="attr-field" *ngIf="newItem.primaryAttributes[i].fieldType==='COMBO'">
+                            <emdm-combobox [attrValList]="newItem.primaryAttributes[i].masterAttributeChoices" [formControl]="attr" [(ngModel)]="newItem.primaryAttributes[i].attrValue"
+                              [invalid]="false">
+                            </emdm-combobox>
+                          </div>
+                        </div>
+                      </div>
+
+                      <label class="attr-header">Secondary Attributes</label>
+                      <div class="row" formArrayName="secondaryAttributesFormArray">
+                        <div class="col-md-12 attr-box" *ngFor="let attr of newItemForm.controls.secondaryAttributesFormArray.controls; let i = index;">
+                          <div>{{newItem.secondaryAttributes[i].masterAttrDisplayName}}</div>
+                          <div class="attr-field" *ngIf="newItem.secondaryAttributes[i].fieldType==='TEXT'">
+                            <input type="text" class="text-input form-control" [formControl]="attr" [(ngModel)]="newItem.secondaryAttributes[i].attrValue"
+                            />
+                          </div>
+                          <div class="attr-field" *ngIf="newItem.secondaryAttributes[i].fieldType==='number'">
+                            <input type="text" class="text-input form-control" [formControl]="attr" [(ngModel)]="newItem.secondaryAttributes[i].attrValue"
+                            />
+                          </div>
+                          <div class="attr-field" *ngIf="newItem.secondaryAttributes[i].fieldType==='COMBO'">
+                            <emdm-combobox [attrValList]="newItem.secondaryAttributes[i].masterAttributeChoices" [formControl]="attr" [(ngModel)]="newItem.secondaryAttributes[i].attrValue"
+                              [invalid]="false">
+                            </emdm-combobox>
+                          </div>
+                        </div>
+                      </div>
+
+                    </div>
+                  </div>
+                </form>
+                <!-- End - Clone new item form -->
+              </div>
+              <div class="col-md-6">
+                <div class="clone-item-container">
+                  <div>Item Description</div>
+                  <div class="small-label ellipsis" style="height: 24px;" [title]="relatedItem.current.shortDescription">
+                    {{relatedItem.current.shortDescription}}
+                  </div>
+                  <label class="attr-header">Primary Attributes</label>
+                  <div class="row">
+                    <div class="col-md-12 attr-box">
+                      <div class="attr-label">UPC</div>
+                      <div class="attr-value">{{relatedItem.current.upc}}</div>
+                    </div>
+                    <div class="col-md-12 attr-box">
+                      <div class="attr-label">Sector</div>
+                      <div class="attr-value">{{relatedItem.current.sector}}</div>
+                    </div>
+                    <div class="col-md-12 attr-box">
+                      <div class="attr-label">Segment</div>
+                      <div class="attr-value">{{relatedItem.current.segment}}</div>
+                    </div>
+                    <div class="col-md-12 attr-box">
+                      <div class="attr-label">Class</div>
+                      <div class="attr-value">{{relatedItem.current.class}}</div>
+                    </div>
+
+                    <div class="row">
+                      <div class="col-md-12 attr-box" *ngFor="let attr of relatedItem.current.primaryAttributes;">
+                        <div class="attr-label">{{attr.label}}</div>
+                        <div class="attr-value">{{attr.value}}</div>
+                      </div>
+                    </div>
+
+                    <label class="attr-header">Secondary Attributes</label>
+                    <div class="row">
+                      <div class="col-md-12 attr-box" *ngFor="let attr of relatedItem.current.secondaryAttributes;">
+                        <div class="attr-label">{{attr.label}}</div>
+                        <div class="attr-value">{{attr.value}}</div>
+                      </div>
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Footer Action buttons -->
+        <div class="modal-footer">
+          <div class="row">
+            <div class="pull-left">
+              <button class="btn btn-default" (click)="hideCloneDialog()">Close</button>
+            </div>
+            <div class="pull-right">
+              <button class="btn btn-default">Match to this item</button>
+              <button class="btn btn-primary" (click)="cloneRelatedItem()">Clone Attributes</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<emdm-go-to-top></emdm-go-to-top>

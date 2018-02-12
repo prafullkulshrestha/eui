@@ -1,0 +1,65 @@
+<div *ngIf="mode==='edit'" class="row comp-item-container">
+  <div class="col-md-9">
+    <div class="info-box">
+      <div class="row">
+        <div class="col-md-5">
+          <div><strong>Item Description</strong></div>
+          <div>{{item.description}}</div>
+        </div>
+        <div class="col-md-3">
+          <div><strong>UPC</strong></div>
+          <div>{{item.upc}}</div>
+        </div>
+        <div class="col-md-4">
+          <div><strong>UID</strong></div>
+          <div>{{item.itemSkey}}</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-md-3">
+    <div class="comp-item-action-box">
+      <div class="row">
+        <div class="col-md-5">
+          <div class="quantity"><strong>Quantity</strong></div>
+          <input type="text" class="form-control mini-input" [class.invalid-input]="quantityError" [ngModel]="item.quantity" (ngModelChange)="onQuantityChange($event)"
+          />
+        </div>
+        <div class="col-md-7 action-btns-container">
+          <button class="btn grey-btn btn-block mini-button">View Master</button>
+          <button class="btn btn-danger btn-block mini-button">Unlink</button>
+        </div>
+      </div>
+      <div class="text-danger">
+        <div class="quantity-error-msg">{{ quantityError }}</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div *ngIf="mode==='view'" class="row">
+  <div class="view-box">
+    <div class="row">
+      <div class="col-md-5">
+        <div><strong>Item Description</strong></div>
+        <div>{{item.description}}</div>
+      </div>
+      <div class="col-md-2">
+        <div><strong>UPC</strong></div>
+        <div>{{item.upc}}</div>
+      </div>
+      <div class="col-md-2">
+        <div><strong>UID</strong></div>
+        <div>{{item.itemSkey}}</div>
+      </div>
+      <div class="col-md-1">
+        <div><strong>Quantity</strong></div>
+        <div>{{item.quantity}}</div>
+      </div>
+      <div class="col-md-2">
+        <button class="btn grey-btn mini-button pull-right" style="margin-top: 10px;">View Master</button>
+      </div>
+    </div>
+  </div>
+</div>

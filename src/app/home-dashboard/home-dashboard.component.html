@@ -1,0 +1,102 @@
+<!--Navbar Heading-->
+<div class="container-main">
+  <div class="card-title dark-blue center">
+    Home Dashboard
+  </div>
+  <div>
+    <div class="container dashboardcard-container">
+      <div class="row">
+        <div class="col-md-6 dashboardcard main-detail">
+          <div class="row">
+            <div class="big-label"> Items For Manual Matching</div>
+          </div>
+          <div class="row dashboardcardcount">{{itemManualMatchingCount}}</div>
+          <div class="row">Source Records</div>
+          <div class="row">
+            <button class="btn btn-primary dashboardbtns" (click)="onView('itemManualMatching', 'item_mm_created')">
+             View
+            </button>
+          </div>
+        </div>
+        <div class="col-md-6 dashboardcard main-detail">
+          <div class="row">
+            <div class="big-label">New Master Item Drafts</div>
+          </div>
+          <div class="row dashboardcardcount">{{itemsForDraftCount}}</div>
+          <div class="row">Master Item Drafts</div>
+          <div class="row">
+            <button class="btn btn-primary dashboardbtns" (click)="onView('itemCreation', 'item_cr_draft')">
+             View
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-6 dashboardcard main-detail">
+          <div class="row">
+            <div class="big-label">New Master Item Approvals</div>
+          </div>
+          <div class="row dashboardcardcount">{{itemsForApprovalCount}}</div>
+          <div class="row">Suggested Master Items</div>
+          <div class="row">
+            <button class="btn btn-primary dashboardbtns" (click)="onView('itemCreation', 'item_cr_review')">
+             View
+            </button>
+          </div>
+        </div>
+        <div class="col-md-6 dashboardcard main-detail">
+          <div class="row">
+            <div class="big-label">Organizations For Manual Matching</div>
+          </div>
+          <div class="row dashboardcardcount">{{orgManualMatchingCount}}</div>
+          <div class="row">Source Records</div>
+          <div class="row">
+            <button class="btn btn-primary dashboardbtns" (click)="onView('orgManualMatching', 'org_mm_created')">
+             View
+            </button>
+          </div>
+        </div>
+      </div>
+       <div class="row">
+        <div class="col-md-6 dashboardcard main-detail">
+          <div class="row">
+            <div class="big-label">My Worklist</div>
+          </div>
+          <div class="row dashboardcardcount">{{itemsForUserCount}}</div>
+          <div class="row">Records Assigned To Me</div>
+          <div class="row">
+            <button class="btn btn-primary dashboardbtns" (click)="onView('myWorklist', 'assigned')">
+             View
+            </button>
+          </div>
+        </div>
+        <div class="col-md-6 dashboardcard main-detail">
+          <div class="row">
+            <div class="big-label">New Attribute Approvals</div>
+          </div>
+          <div class="row dashboardcardcount">0</div>
+          <div class="row">Suggested Attributes</div>
+          <div class="row">
+            <button class="btn btn-primary dashboardbtns" (click)="onView('tbd')">
+             View
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-6 dashboardcard main-detail">
+          <div class="row">
+            <div class="big-label">New Attribute Value Approvals</div>
+          </div>
+          <div class="row dashboardcardcount">0</div>
+          <div class="row">Suggested Attribute Values</div>
+          <div class="row">
+            <button class="btn btn-primary dashboardbtns" (click)="onView('tbd')">
+             View
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
